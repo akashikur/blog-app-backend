@@ -18,11 +18,11 @@ app.use(
 const PORT = process.env.PORT;
 app.use(express.json());
 
-app.use("user", userRoutes);
+app.use("/user", userRoutes);
 
-app.use("blog", blogRoutes);
+app.use("/blog", blogRoutes);
 
-app.use("follow", followRoutes);
+app.use("/follow", followRoutes);
 
 app.listen(PORT, () => {
   console.log("server is connected to :", PORT);
